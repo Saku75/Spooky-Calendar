@@ -1,0 +1,73 @@
+.pageCalendar {
+	display: grid;
+	grid: auto / repeat(1, 1fr);
+	gap: 1rem;
+}
+@media screen and (min-width: 400px) {
+	.pageCalendar {
+		grid: auto / repeat(2, 1fr);
+	}
+}
+@media screen and (min-width: 768px) {
+	.pageCalendar {
+		grid: auto / repeat(3, 1fr);
+	}
+}
+@media screen and (min-width: 1024px) {
+	.pageCalendar {
+		grid: auto / repeat(4, 1fr);
+	}
+}
+
+.pageCalendar > section {
+	position: relative;
+	aspect-ratio: 1 / 1;
+}
+
+.pageCalendar > section > :nth-child(1) {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+
+	background-color: var(--color-accent-light);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	border-radius: 1rem;
+
+	transform-origin: left;
+	transition: transform 1000ms ease-in-out;
+}
+.pageCalendar > section > :nth-child(1):hover {
+	background-color: var(--color-accent-dark);
+}
+
+@keyframes openDay {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.pageCalendar > section.open > :nth-child(1) {
+	transform: perspective(3500px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-92deg);
+}
+
+.pageCalendar > section > :nth-child(2) {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-secondary);
+	border-radius: 1rem;
+}

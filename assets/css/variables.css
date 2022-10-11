@@ -1,0 +1,13 @@
+:root {
+	/* Fonts */
+	--font-primary: "Griffy", cursive;
+	--font-secondary: "Roboto", sans-serif;
+
+	/* Colors */
+	--color-body: #181a1b;
+	--color-primary: #26292a;
+	--color-secondary: #4b4141;
+	--color-tertiary: #f2f2f2;
+	--color-accent-light: #ee7000;
+	--color-accent-dark: #e64a19;
+}

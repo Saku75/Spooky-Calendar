@@ -1,0 +1,56 @@
+.pageHeader {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+@media screen and (min-width: 768px) {
+	.pageHeader {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.pageHeader > :nth-child(1) {
+	display: flex;
+	align-items: center;
+}
+
+.pageHeader > :nth-child(1) > img {
+	max-height: 8rem;
+	margin-left: -1rem;
+}
+@media screen and (min-width: 365px) {
+	.pageHeader > :nth-child(1) > img {
+		margin-left: -1.5rem;
+	}
+}
+@media screen and (min-width: 768px) {
+	.pageHeader > :nth-child(1) > img {
+		margin-left: 0;
+	}
+}
+
+.pageHeader > :nth-child(1) > h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.pageHeader > :nth-child(2) {
+	margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+	.pageHeader > :nth-child(2) {
+		margin-bottom: 0;
+	}
+}
+
+.pageHeader > :nth-child(2) form {
+	display: grid;
+	grid: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+.pageHeader > :nth-child(2) > form > label {
+	grid-column: span 2;
+	display: flex;
+	justify-content: center;
+}

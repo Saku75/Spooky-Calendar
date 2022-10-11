@@ -1,0 +1,21 @@
+.pageFooter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+	.pageFooter {
+		flex-direction: row;
+	}
+
+	.pageFooter > :nth-child(1) {
+		margin-right: 1rem;
+	}
+}
+
+.pageFooter > :nth-child(2) {
+	color: var(--color-accent-light);
+	font-family: var(--font-secondary);
+}

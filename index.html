@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Default -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spooky Calendar</title>
+
+		<!-- Webmanifest -->
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="description" content="A spooky calendar for you spooky needs!" />
+		<link rel="shortcut icon" href="/assets/img/ico/favicon.ico" type="image/x-icon" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/ico/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/ico/favicon-32x32.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/ico/apple-touch-icon.png" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/assets/css/main.css" />
+
+		<!-- JS -->
+		<script src="/assets/js/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container pageHeader">
+				<section>
+					<img src="/assets/img/logo-pumpkin.png" alt="Pumpkin logo" />
+					<h1>Spooky Calendar</h1>
+				</section>
+				<!-- <section>
+					<form id="calendarCodeForm" novalidate>
+						<label for="recoveryCodeInput">Recover Calendar</label>
+						<input
+							type="text"
+							id="calendarCode"
+							name="calendarCode"
+							placeholder="Calendar Code..."
+							required />
+						<button type="submit">Submit</button>
+					</form>
+				</section> -->
+			</div>
+		</header>
+		<!-- <main>
+			<div class="container pageText">
+				<section>
+					<h2>Spooky Calendar</h2>
+					<p>
+						Spooky Calendar is a calendar that you can use to keep track of your spooky events. It's
+						perfect for Halloween, but you can use it for any spooky event!
+					</p>
+					<p>
+						To get started, click the button below to create a new calendar. You can also recover a
+						previous calendar by entering the recovery code.
+					</p>
+					<button id="createCalendarButton">Create Calendar</button>
+				</section>
+			</div>
+		</main> -->
+		<main>
+			<div class="container pageCalendar">
+				<section class="day" data-day="1">
+					<div class="door">
+						<p>1</p>
+					</div>
+					<div>Hello!</div>
+				</section>
+				<section class="day" data-day="2">
+					<div class="door">
+						<p>2</p>
+					</div>
+					<div>Hello!</div>
+				</section>
+				<section class="day" data-day="3">
+					<div class="door">
+						<p>3</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="4">
+					<div class="door">
+						<p>4</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="5">
+					<div class="door">
+						<p>5</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="6">
+					<div class="door">
+						<p>6</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="7">
+					<div class="door">
+						<p>7</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="8">
+					<div class="door">
+						<p>8</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="9">
+					<div class="door">
+						<p>9</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="10">
+					<div class="door">
+						<p>10</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="11">
+					<div class="door">
+						<p>11</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="12">
+					<div class="door">
+						<p>12</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="13">
+					<div class="door">
+						<p>13</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="14">
+					<div class="door">
+						<p>14</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="15">
+					<div class="door">
+						<p>15</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="16">
+					<div class="door">
+						<p>16</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="17">
+					<div class="door">
+						<p>17</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="18">
+					<div class="door">
+						<p>18</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="19">
+					<div class="door">
+						<p>19</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="20">
+					<div class="door">
+						<p>20</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="21">
+					<div class="door">
+						<p>21</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="22">
+					<div class="door">
+						<p>22</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="23">
+					<div class="door">
+						<p>23</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="24">
+					<div class="door">
+						<p>24</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="25">
+					<div class="door">
+						<p>25</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="26">
+					<div class="door">
+						<p>26</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="27">
+					<div class="door">
+						<p>27</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="28">
+					<div class="door">
+						<p>28</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="29">
+					<div class="door">
+						<p>29</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="30">
+					<div class="door">
+						<p>30</p>
+					</div>
+					<div></div>
+				</section>
+				<section class="day" data-day="31">
+					<div class="door">
+						<p>31</p>
+					</div>
+					<div></div>
+				</section>
+			</div>
+		</main>
+		<!-- <footer>
+			<div class="container pageFooter">
+				<p>Calendar Code:</p>
+				<p id="calendarCodeOutput"></p>
+			</div>
+		</footer> -->
+	</body>
+</html>
