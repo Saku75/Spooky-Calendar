@@ -1,7 +1,7 @@
 // Get current month and day
 const date = new Date();
-const month = date.getMonth() + 1;
-const day = date.getDate();
+const currentMonth = date.getMonth() + 1;
+const currentDay = date.getDate();
 
 // Service worker
 const registerServiceWorker = async () => {
@@ -50,21 +50,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Open day
 function openDay(day) {
-	// Open door for day element
-	day.classList.toggle("open");
+	// If current day bigger than day and current month is october
+	if (day.dataset.day <= currentDay && currentMonth === 10) {
+		// Open door for day element
+		day.classList.toggle("open");
 
-	// Add day number to array if open
-	if (day.classList.contains("open")) {
-		openedDays.push(day.dataset.day);
-	} else {
-		// Remove day number from array if closed
-		openedDays = openedDays.filter(function (openDay) {
-			return openDay !== day.dataset.day;
-		});
+		// Add day number to array if open
+		if (day.classList.contains("open")) {
+			openedDays.push(day.dataset.day);
+		} else {
+			// Remove day number from array if closed
+			openedDays = openedDays.filter(function (openDay) {
+				return openDay !== day.dataset.day;
+			});
+		}
+
+		// Save days to local storage
+		saveDays();
 	}
-
-	// Save days to local storage
-	saveDays();
 }
 
 // Open days
@@ -81,14 +84,17 @@ function openDays(openedDays) {
 
 // Save days
 function saveDays() {
-	// Save days to local storage
-	localStorage.setItem("openedDays", JSON.stringify(openedDays));
+	// Save days to local storagess
+	localStorage.setItem(
+		"calendarData",
+		JSON.stringify({ openedDays: openedDays, lastUpdated: (lastUpdated = new Date()) })
+	);
 }
 
 // Load days
 function loadDays() {
 	// Get days from local storage
-	const days = JSON.parse(localStorage.getItem("openedDays"));
+	const days = JSON.parse(localStorage.getItem("calendarData"));
 
 	// Check if days are available
 	if (days) {
