@@ -67,6 +67,13 @@ function openDay(day) {
 
 		// Save days to local storage
 		saveDays();
+	} else {
+		// If door is not openable
+		day.classList.add("shake");
+
+		setTimeout(function () {
+			day.classList.remove("shake");
+		}, 600);
 	}
 }
 
