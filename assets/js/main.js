@@ -94,11 +94,11 @@ function saveDays() {
 // Load days
 function loadDays() {
 	// Get days from local storage
-	const days = JSON.parse(localStorage.getItem("calendarData"));
+	const calendarData = JSON.parse(localStorage.getItem("calendarData"));
 
 	// Check if days are available
-	if (days) {
+	if (calendarData) {
 		// Open days
-		openDays(days);
+		openDays(calendarData.openedDays);
 	}
 }

@@ -33,6 +33,7 @@
 	z-index: 1;
 
 	background-color: var(--color-accent-light);
+	color: var(--color-tertiary);
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
