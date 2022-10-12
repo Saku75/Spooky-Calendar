@@ -1,40 +1,23 @@
+console.log("Main.js loading...");
+
 // Get current month and day
 const date = new Date();
 const currentMonth = date.getMonth() + 1;
 const currentDay = date.getDate();
-
-// Service worker
-const registerServiceWorker = async () => {
-	if ("serviceWorker" in navigator) {
-		try {
-			const registration = await navigator.serviceWorker.register("/sw.js", {
-				scope: "/",
-			});
-			if (registration.installing) {
-				console.log("Service worker installing");
-			} else if (registration.waiting) {
-				console.log("Service worker installed");
-			} else if (registration.active) {
-				console.log("Service worker active");
-			}
-		} catch (error) {
-			console.error(`Registration failed with ${error}`);
-		}
-	}
-};
-
-registerServiceWorker();
 
 // Global variables
 let openedDays = [];
 
 // On DOM load
 document.addEventListener("DOMContentLoaded", function () {
+	console.log("DOM loaded");
+
 	// DOM elements
 	const doors = document.querySelectorAll(".door");
 
 	// Loop through doors
 	doors.forEach(function (door) {
+		// Add click event listener
 		door.addEventListener("click", function () {
 			// Get door number
 			const dayElement = door.parentElement;
@@ -42,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			// Open door
 			openDay(dayElement);
 		});
+		console.log("Door loaded");
 	});
 
 	// Load days
@@ -58,11 +42,13 @@ function openDay(day) {
 		// Add day number to array if open
 		if (day.classList.contains("open")) {
 			openedDays.push(day.dataset.day);
+			console.log("Opened day: " + day.dataset.day);
 		} else {
 			// Remove day number from array if closed
 			openedDays = openedDays.filter(function (openDay) {
 				return openDay !== day.dataset.day;
 			});
+			console.log("Closed day: " + day.dataset.day);
 		}
 
 		// Save days to local storage
@@ -91,7 +77,7 @@ function openDays(openedDays) {
 
 // Save days
 function saveDays() {
-	// Save days to local storagess
+	// Save days to local storage
 	localStorage.setItem(
 		"calendarData",
 		JSON.stringify({ openedDays: openedDays, lastUpdated: (lastUpdated = new Date()) })
@@ -109,3 +95,5 @@ function loadDays() {
 		openDays(calendarData.openedDays);
 	}
 }
+
+console.log("Main.js loaded");
