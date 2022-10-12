@@ -46,15 +46,33 @@
 .pageCalendar > section > :nth-child(1):hover {
 	background-color: var(--color-accent-dark);
 }
-
-@keyframes openDay {
-	0% {
-		opacity: 0;
-		transform: scale(0.5);
+.pageCalendar > :nth-child(3n - 1) > :nth-child(1) {
+	background-image: url("/assets/img/door-pumpkin.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.pageCalendar > :nth-child(3n - 2) > :nth-child(1) {
+	background-image: url("/assets/img/door-cat.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.pageCalendar > :nth-child(3n - 3) > :nth-child(1) {
+	background-image: url("/assets/img/door-bats.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.pageCalendar > :nth-child(4n - 1) > :nth-child(1) {
+		background-image: url("/assets/img/door-pumpkin.png") !important;
 	}
-	100% {
-		opacity: 1;
-		transform: scale(1);
+	.pageCalendar > :nth-child(2n - 2) > :nth-child(1) {
+		background-image: url("/assets/img/door-bats.png");
+	}
+	.pageCalendar > :nth-child(2n - 3) > :nth-child(1) {
+		background-image: url("/assets/img/door-cat.png");
 	}
 }
 
@@ -68,6 +86,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--color-secondary);
+	background-color: var(--color-primary);
 	border-radius: 1rem;
 }
